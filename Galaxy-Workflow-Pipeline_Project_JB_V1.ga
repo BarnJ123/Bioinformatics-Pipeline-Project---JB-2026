@@ -6,11 +6,14 @@ Tool Order:
         Dataset Input - gather raw data to process in pipeline
         Fastq - gather quality metrics from fastq files
         Bowtie2 - map files to reference genome 
-        MarkDuplciates
+        MarkDuplciates - examine aligned in BAM datasets to locate and remove duplicates
         *** Break ***
-        Call Variants
-        SnpEff eff
-        SnpEff eff Extract Fields 
+        Call Variants - LoFreq to call variants 
+        SnpEff eff - Annotate variants called 
+        SnpEff eff Extract Fields - Extrcat clinally relevant varinats called 
+
+Comments:
+        Was unble to join MarkDuplciates and Call Varinats depsite reiureed input file being in the same format of MarkDuplciates Output 
 
 *****************************************************************************************************
 
