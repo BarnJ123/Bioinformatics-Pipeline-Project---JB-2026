@@ -16,6 +16,7 @@ Tool Order:
         
 Comments:
         Troubleshooting reference genome - tools need manual assignemnt of hg19 reference genome 
+        Edit of post processing Quality Control, adding secondary incorperation of multiQC post alignbment 
 
 *****************************************************************************************************
 {
