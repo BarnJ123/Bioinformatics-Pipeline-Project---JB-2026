@@ -1,3 +1,30 @@
+*****************************************************************************************************
+JB Bioinformatics Pipeline Project V2.5
+Troubleshooting why data input will not connect to into fastq and trimmomatic
+
+Tool Order:    
+        Dataset Input - gather raw data to process in pipeline
+        Falco - alternative, more performant implementation of FastQC for high throughput sequence quality control
+        MultiQC - collat indiviual quality metric into one file 
+        *** Break ***
+        Fastq - gather quality metrics from fastq files
+        Trimmomatic - removes indexes incorperatedby Illumina sequencers
+        BWA-MEM2 - map medium and long read files to reference genome 
+        Filter BAM - Filter mapping reads by Phred score 
+        RmDup - examine aligned in BAM datasets to locate and remove duplicates
+        BamLeftAlign - Left-align indels in sequencing reads within a BAM file, Standardises the position of the indel
+        Samtools calmd - recalculate MD and NM tags in a BAM/CRAM file by comparing reads to a reference genome.
+        VarScan somatic - call variants germline/somatic 
+        SnpEff eff - Annotate variants called 
+        SnpEff eff Extract Fields - Extrcat clinally relevant varinats called 
+        GEMINI load - Load annotated varinats into Gemini database
+        GEMINI annotate - further annotation with Gemini
+        GEMINI annotate - export Gemini pout as VCF, json and tabular format 
+
+Comments:
+      
+
+*****************************************************************************************************
 {
     "a_galaxy_workflow": "true",
     "annotation": "Variant Calling Pipeline bioinformatics project ",
