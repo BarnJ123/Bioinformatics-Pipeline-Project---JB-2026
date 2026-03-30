@@ -1,4 +1,19 @@
-{
+*****************************************************************************************************
+JB Bioinformatics Pipeline Project V1 
+Inital trial of tools and workflow assembly to process collection (4 samples).
+
+Tool Order:    
+        Dataset Input - gather raw data to process in pipeline
+        Fastq - gather quality metrics from fastq files
+        Bowtie2 - map files to reference genome 
+        MarkDuplciates
+        *** Break ***
+        Call Variants
+        SnpEff eff
+        SnpEff eff Extract Fields 
+
+*****************************************************************************************************
+
     "a_galaxy_workflow": "true",
     "annotation": "Variant Calling Pipeline bioinformatics project ",
     "comments": [],
