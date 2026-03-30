@@ -1,3 +1,25 @@
+*****************************************************************************************************
+JB Bioinformatics Pipeline Project V3
+Creation of piepline with end-to-end functionality. Able to fully process a sample without error. 
+
+Tool Order:    
+        Dataset Input - gather raw data to process in pipeline
+        Fastq - gather quality metrics from fastq files
+        MultiQC - collat indiviual quality metric into one file 
+        MarkDuplicates - examine aligned in BAM datasets to locate and remove duplicates
+        Re-align Reads - Correcting the misalignments around insertions and deletions, an alternative to BamLeftAlign
+        Insert indel qualities - Adding the indel qualities into our alignment file via Insert indel qualities
+        Call variants - call varinats with lowfreq
+        SnpEff eff - Annotate variants called 
+        SnpEff eff Extract Fields - Extrcat clinally relevant varinats called 
+        Collapse Collection - presents annotated variants into a single dataset 
+        GEMINI load - Load annotated varinats into Gemini database
+        GEMINI annotate - further annotation with Gemini
+        GEMINI annotate - export Gemini pout as VCF, json and tabular format 
+Comments:
+        Removal of tools:Trimmomatic, BWA-MEM2, Falco, BamLeftAlign and GEMINI
+
+*****************************************************************************************************
 {
     "a_galaxy_workflow": "true",
     "annotation": "",
