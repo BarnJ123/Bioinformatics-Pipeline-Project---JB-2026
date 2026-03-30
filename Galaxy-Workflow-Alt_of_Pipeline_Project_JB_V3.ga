@@ -1,3 +1,28 @@
+*****************************************************************************************************
+JB Bioinformatics Pipeline Project Alt V3
+A change of input from collection to R1 and R2 to re-incorperate tools that were incompatible with collection
+
+Tool Order:    
+        Dataset Input - gather R1 and R2 
+        Falco - alternative, more performant implementation of FastQC for high throughput sequence quality control
+        MultiQC - collate indiviual quality metric into one file 
+        Fastq - gather quality metrics from fastq files
+        Trimmomatic - removes indexes incorperatedby Illumina sequencers
+        BWA-MEM2 - map medium and long read files to reference genome 
+        Filter BAM - Filter mapping reads by Phred score <254
+        RmDup - examine aligned in BAM datasets to locate and remove duplicates
+        BamLeftAlign - Left-align indels in sequencing reads within a BAM file, Standardises the position of the indel
+        Samtools calmd - recalculate MD and NM tags in a BAM/CRAM file by comparing reads to a reference genome.
+        Picard Collect Sequencing Artifact Metrics - post processing QC 
+        Samtools flagstat -provides a fast summary of alignment statistics from a BAM
+        FreeBayes - Identification of known variants within BAM file, alternative variant caller 
+        bcftools norm - Left-align and normalize indels; check if REF alleles match the reference; split multiallelic sites into multiple rows; recover multiallelics from multiple rows
+        SnpEff eff - Annotate variants called 
+
+Comments:
+        Removal of GEMINI tools 
+
+*****************************************************************************************************
 {
     "a_galaxy_workflow": "true",
     "annotation": "",
