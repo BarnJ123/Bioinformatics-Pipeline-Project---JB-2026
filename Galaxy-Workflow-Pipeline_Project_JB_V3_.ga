@@ -13,9 +13,7 @@ Tool Order:
         SnpEff eff - Annotate variants called 
         SnpEff eff Extract Fields - Extrcat clinally relevant varinats called 
         Collapse Collection - presents annotated variants into a single dataset 
-        GEMINI load - Load annotated varinats into Gemini database
-        GEMINI annotate - further annotation with Gemini
-        GEMINI annotate - export Gemini pout as VCF, json and tabular format 
+        
 Comments:
         Removal of tools:Trimmomatic, BWA-MEM2, Falco, BamLeftAlign and GEMINI
 
